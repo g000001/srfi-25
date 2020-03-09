@@ -2,21 +2,32 @@
 
 (cl:in-package :cl-user)
 
-(defpackage :srfi-25
+
+(defpackage "https://github.com/g000001/srfi-25"
   (:use)
-  (:export :array? :make-array :shape
-           :array :array-rank :array-start
-           :array-end :array-ref :array-set!
-           :share-array))
+  (:export array? make-array shape
+           array array-rank array-start
+           array-end array-ref array-set!
+           share-array))
 
-(defpackage :srfi-25.internal
-  (:use :srfi-25 :cl :fiveam)
-  (:shadowing-import-from :srfi-5 :let)
-  (:shadowing-import-from :srfi-23 :error)
-  (:shadowing-import-from :srfi-25
-                          :array
-                          :make-array
-                          :array-rank)
-  (:shadow :lambda :loop :do))
 
-;;; eof
+(defpackage "https://github.com/g000001/srfi-25#internals"
+  (:use 
+   "https://github.com/g000001/srfi-25"
+   "https://github.com/g000001/srfi-23"
+   "https://github.com/g000001/srfi-5"
+   cl
+   fiveam)
+  (:shadowing-import-from
+   "https://github.com/g000001/srfi-5" let)
+  (:shadowing-import-from
+   "https://github.com/g000001/srfi-23" error)
+  (:shadowing-import-from
+   "https://github.com/g000001/srfi-25"
+   array
+   make-array
+   array-rank)
+  (:shadow lambda loop do))
+
+
+;;; *EOF*

@@ -1,8 +1,6 @@
-(cl:in-package :srfi-25.internal)
+(cl:in-package "https://github.com/g000001/srfi-25#internals")
 
-(def-suite srfi-25)
-
-(in-suite srfi-25)
+(def-suite* srfi-25)
 
 ;;; array test
 ;;; 2001 Jussi Piitulainen

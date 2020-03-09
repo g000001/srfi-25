@@ -1,4 +1,5 @@
-* SRFI-25: Multi-dimensional Array Primitives
+# SRFI 25 for CL: Multi-dimensional Array Primitives
+
 - Copyright (C) Jussi Piitulainen (2001). All Rights Reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining
